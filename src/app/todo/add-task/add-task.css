@@ -1,0 +1,124 @@
+/* ======= Default / Laptop View ======= */
+.container {
+  max-width: 600px;
+  margin: 70px auto 40px; /* space from top header */
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todo-form h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.todo-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #555;
+}
+
+.todo-form input,
+.todo-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+  background: #fff;
+  outline: none;
+  resize: none;
+}
+
+.todo-form input:focus,
+.todo-form textarea:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.todo-form button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todo-form button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
+}
+
+.todo-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ======= Tablet View (768px–1023px) ======= */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .container {
+    max-width: 90%;
+    margin: 80px auto 30px;
+    padding: 25px;
+  }
+
+  .todo-form h2 {
+    font-size: 22px;
+  }
+
+  .todo-form input,
+  .todo-form textarea {
+    font-size: 14px;
+  }
+
+  .todo-form button {
+    font-size: 15px;
+  }
+}
+
+/* ======= Mobile View (≤767px) ======= */
+@media (max-width: 767px) {
+  .container {
+    max-width: 95%;
+    margin: 70px 15px 20px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .todo-form h2 {
+    font-size: 20px;
+  }
+
+  .todo-form label {
+    font-size: 14px;
+  }
+
+  .todo-form input,
+  .todo-form textarea {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .todo-form button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}

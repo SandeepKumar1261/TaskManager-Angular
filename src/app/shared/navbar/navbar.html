@@ -1,0 +1,30 @@
+<header class="header">
+  <div class="toolbar">
+    <div class="logo">
+      <i class="fas fa-lock"></i>
+      <span>ToDo</span>
+    </div>
+
+    <div
+      class="user-info"
+      *ngIf="username; else guest"
+      (click)="toggleUserCard()"
+    >
+      <i class="fas fa-user-circle user-icon"></i>
+      <span class="username">{{ username }}</span>
+    </div>
+
+    <ng-template #guest>
+      <div class="user-info" (click)="goToLogin()">
+        <i class="fas fa-user-circle user-icon"></i>
+        <span class="username">Guest</span>
+      </div>
+    </ng-template>
+  </div>
+
+  <!-- 👇 Logout Card (outside navbar) -->
+  <div class="user-card" *ngIf="showUserCard" #popupCard>
+    <p>Welcome, {{ username }}</p>
+    <button (click)="logout()">Logout</button>
+  </div>
+</header>

@@ -1,0 +1,257 @@
+.todo-list-container {
+  height: auto;
+  max-width: 1800px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.search-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-wrap: nowrap; /* Always in one line */
+}
+
+.search-bar input {
+  /* flex: 1; */
+  width: 40%;
+  min-width: 0;
+  padding: 15px 20px;
+  border: 2px solid #e1e8ed;
+  border-radius: 50px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.search-bar input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.add-task-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.add-task-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.add-task-btn::before {
+  content: "\f067";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.todo-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0;
+}
+
+.todo-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  position: relative; /* Required for absolute buttons */
+  min-height: 180px; /* Ensures space for buttons */
+}
+
+.todo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.todo-card h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.todo-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.in-progress {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.todo-actions {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  overflow: hidden;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.edit-btn {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.edit-btn:hover {
+  background: #1976d2;
+  color: white;
+}
+
+.delete-btn {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.delete-btn:hover {
+  background: #d32f2f;
+  color: white;
+}
+
+.todo-empty {
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+  padding: 50px;
+  font-style: italic;
+}
+
+/* Responsive: Laptop (already handled by default styles) */
+@media (min-width: 1024px) {
+  .todo-list {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+/* Tablet */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .todo-list-container {
+    padding: 25px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  body {
+    padding: 10px;
+  }
+
+  .todo-list-container {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .search-bar input {
+    width: 50%;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .add-task-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .todo-list {
+    grid-template-columns: 1fr;
+  }
+
+  .todo-card {
+    padding: 20px;
+  }
+
+  .todo-card h3 {
+    font-size: 18px;
+  }
+
+  .todo-card p {
+    font-size: 13px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+  .todo-list-container {
+    padding: 15px;
+  }
+
+  .todo-card {
+    padding: 15px;
+  }
+
+  .todo-card h3 {
+    font-size: 16px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}

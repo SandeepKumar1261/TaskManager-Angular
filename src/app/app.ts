@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.html',
   standalone: false,
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
-export class App {
-  protected title = 'ToDoApp';
-}
+export class App {}

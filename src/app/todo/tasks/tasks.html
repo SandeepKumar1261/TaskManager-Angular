@@ -1,0 +1,164 @@
+<!-- <div class="todo-list-container">
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search tasks..."
+      [(ngModel)]="searchTerm"
+      (input)="filterTasks()"
+    />
+    <button class="add-task-btn" (click)="navigateToAddTask()">Add Task</button>
+  </div>
+
+  <ul class="todo-list">
+    @for (todo of filteredtasks; track todo._id) {
+    <li class="todo-card">
+      <h3>{{ todo.title }}</h3>
+      <p>{{ todo.description }}</p>
+      <span
+        class="status"
+        [ngClass]="todo.completed ? 'completed' : 'in-progress'"
+      >
+        {{ todo.completed ? 'Completed' : 'In Progress' }}
+      </span>
+      <div class="todo-actions">
+        <button class="edit-btn" (click)="navigateToEditTask(todo)">
+          Edit
+        </button>
+        <button class="delete-btn" (click)="deleteTask(todo._id)">
+          Delete
+        </button>
+      </div>
+    </li>
+    } @empty {
+    <p class="todo-empty">No tasks found.</p>
+    }
+  </ul>
+</div> 
+<<div class="todo-list-container">
+  <div class="search-bar">
+    <input type="text" placeholder="Search tasks..." id="searchInput" />
+    <button class="add-task-btn" onclick="navigateToAddTask()">Add Task</button>
+  </div>
+
+  <ul class="todo-list" id="todoList">
+     Sample todo items for demonstration 
+    <li class="todo-card">
+      <h3>Complete Project Documentation</h3>
+      <p>
+        Write comprehensive documentation for the new project including API
+        references and user guides.
+      </p>
+      <span class="status in-progress">In Progress</span>
+      <div class="todo-actions">
+        <button
+          class="edit-btn"
+          onclick="navigateToEditTask(this)"
+          title="Edit Task"
+        >
+          <i class="fas fa-edit"></i>
+        </button>
+        <button
+          class="delete-btn"
+          onclick="deleteTask(this)"
+          title="Delete Task"
+        >
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    </li>
+
+    <li class="todo-card">
+      <h3>Team Meeting Preparation</h3>
+      <p>
+        Prepare agenda and materials for the upcoming team meeting scheduled for
+        next week.
+      </p>
+      <span class="status completed">Completed</span>
+      <div class="todo-actions">
+        <button
+          class="edit-btn"
+          onclick="navigateToEditTask(this)"
+          title="Edit Task"
+        >
+          <i class="fas fa-edit"></i>
+        </button>
+        <button
+          class="delete-btn"
+          onclick="deleteTask(this)"
+          title="Delete Task"
+        >
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    </li>
+
+    <li class="todo-card">
+      <h3>Code Review</h3>
+      <p>
+        Review pull requests from team members and provide constructive
+        feedback.
+      </p>
+      <span class="status in-progress">In Progress</span>
+      <div class="todo-actions">
+        <button
+          class="edit-btn"
+          onclick="navigateToEditTask(this)"
+          title="Edit Task"
+        >
+          <i class="fas fa-edit"></i>
+        </button>
+        <button
+          class="delete-btn"
+          onclick="deleteTask(this)"
+          title="Delete Task"
+        >
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    </li>
+  </ul>
+</div> -->
+<div class="todo-list-container">
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search tasks..."
+      [(ngModel)]="searchTerm"
+      (input)="filterTasks()"
+    />
+    <button class="add-task-btn" (click)="navigateToAddTask()">Add Task</button>
+  </div>
+
+  <ul class="todo-list">
+    @for (todo of filteredtasks; track todo._id) {
+    <li class="todo-card">
+      <h3>{{ todo.title }}</h3>
+      <p>{{ todo.description }}</p>
+      <span
+        class="status"
+        [ngClass]="todo.completed ? 'completed' : 'in-progress'"
+      >
+        {{ todo.completed ? 'Completed' : 'In Progress' }}
+      </span>
+      <div class="todo-actions">
+        <button
+          class="edit-btn"
+          (click)="navigateToEditTask(todo)"
+          title="Edit Task"
+        >
+          <i class="fas fa-edit"></i>
+        </button>
+        <button
+          class="delete-btn"
+          (click)="deleteTask(todo._id)"
+          title="Delete Task"
+        >
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    </li>
+    } @empty {
+    <p class="todo-empty">No tasks found.</p>
+    }
+  </ul>
+</div>
