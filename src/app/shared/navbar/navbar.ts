@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class Navbar {
   @ViewChild('popupCard') popupCardRef!: ElementRef;
   constructor(private router: Router) {}
-  username: string | null = localStorage.getItem('username'); // or decode token
+  username: string | null = localStorage.getItem('username');
   showUserCard = false;
 
   ngOnInit() {

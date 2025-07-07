@@ -8,7 +8,6 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: 20px auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
   padding: 40px;
   position: relative;
@@ -165,7 +164,6 @@ button:focus {
   outline-offset: 2px;
 }
 
-/* Animation for error message */
 @keyframes fadeInShake {
   0% {
     opacity: 0;
@@ -181,7 +179,6 @@ button:focus {
   }
 }
 
-/* Animation for form appearance */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -197,7 +194,6 @@ button:focus {
   animation: fadeInUp 0.6s ease;
 }
 
-/* Tablet Styles */
 @media (max-width: 768px) and (min-width: 481px) {
   .container {
     max-width: 400px;
@@ -228,7 +224,6 @@ button:focus {
   }
 }
 
-/* Mobile Styles */
 @media (max-width: 480px) {
   .container {
     max-width: 100%;
@@ -264,7 +259,6 @@ button:focus {
   }
 }
 
-/* Extra small screens */
 @media (max-width: 360px) {
   .container {
     margin: 5px auto;
@@ -287,7 +281,6 @@ button:focus {
   }
 }
 
-/* Error state for inputs */
 input.error-input {
   border-color: #e74c3c;
   background: #fdf2f2;

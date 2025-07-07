@@ -14,11 +14,10 @@
   align-items: center;
   justify-content: space-between;
 
-  flex-wrap: nowrap; /* Always in one line */
+  flex-wrap: nowrap;
 }
 
 .search-bar input {
-  /* flex: 1; */
   width: 40%;
   min-width: 0;
   padding: 15px 20px;
@@ -77,8 +76,8 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   border: 1px solid #f0f0f0;
-  position: relative; /* Required for absolute buttons */
-  min-height: 180px; /* Ensures space for buttons */
+  position: relative;
+  min-height: 180px;
 }
 
 .todo-card:hover {
@@ -174,21 +173,18 @@
   font-style: italic;
 }
 
-/* Responsive: Laptop (already handled by default styles) */
 @media (min-width: 1024px) {
   .todo-list {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
 
-/* Tablet */
 @media (max-width: 1023px) and (min-width: 768px) {
   .todo-list-container {
     padding: 25px;
   }
 }
 
-/* Mobile */
 @media (max-width: 767px) {
   body {
     padding: 10px;
@@ -234,7 +230,6 @@
   }
 }
 
-/* Extra small mobile */
 @media (max-width: 480px) {
   .todo-list-container {
     padding: 15px;

@@ -54,7 +54,6 @@ export class AddTask implements OnInit {
     };
 
     if (this.editingId) {
-      // Update existing task
       this.todoService.updateTask(this.editingId, todoData).subscribe({
         next: () => {
           this.router.navigate(['/']);
@@ -64,7 +63,6 @@ export class AddTask implements OnInit {
         },
       });
     } else {
-      // Add new task
       this.todoService.addTodo(todoData).subscribe({
         next: (newTodo: Todos) => {
           this.todoForm.reset();

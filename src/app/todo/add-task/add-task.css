@@ -1,7 +1,6 @@
-/* ======= Default / Laptop View ======= */
 .container {
   max-width: 600px;
-  margin: 70px auto 40px; /* space from top header */
+  margin: 70px auto 40px;
   padding: 30px;
   background: #ffffff;
   border-radius: 15px;
@@ -72,7 +71,6 @@
   cursor: not-allowed;
 }
 
-/* ======= Tablet View (768px–1023px) ======= */
 @media (max-width: 1023px) and (min-width: 768px) {
   .container {
     max-width: 90%;
@@ -94,7 +92,6 @@
   }
 }
 
-/* ======= Mobile View (≤767px) ======= */
 @media (max-width: 767px) {
   .container {
     max-width: 95%;

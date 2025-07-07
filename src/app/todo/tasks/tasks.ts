@@ -46,14 +46,11 @@ export class Tasks {
     if (confirm('Are you sure you want to delete this task?')) {
       this.todoService.deleteTodo(id).subscribe({
         next: () => {
-          // Update both taskss and filteredtasks
           this.taskss = this.taskss.filter((task) => task._id !== id);
           this.filteredtasks = this.filteredtasks.filter(
             (task) => task._id !== id
           );
-          // Emit updated taskss to parent component
           this.tasksUpdated.emit(this.taskss);
-          // Reapply filter to ensure consistency
           this.filterTasks();
         },
         error: (error) => {

@@ -78,10 +78,9 @@
   background-color: #4a148c;
 }
 
-/* ===== User dropdown card ===== */
 .user-card {
   position: absolute;
-  top: 10vh; /* same height as header */
+  top: 10vh;
   right: 2vw;
   background: #ffffff;
   border: 1px solid #ddd;
@@ -110,7 +109,6 @@
   }
 }
 
-/* ===== Tablet View (600px - 900px) ===== */
 @media (max-width: 56.25rem) {
   .header {
     height: 8vh;
@@ -162,7 +160,6 @@
   }
 }
 
-/* ===== Mobile View (below 600px) ===== */
 @media (max-width: 37.5rem) {
   .header {
     height: 7vh;
@@ -220,7 +217,7 @@
 }
 .user-card {
   position: fixed;
-  top: 10vh; /* below header */
+  top: 10vh;
   right: 2vw;
   background: #ffffff;
   border: 1px solid #ddd;
